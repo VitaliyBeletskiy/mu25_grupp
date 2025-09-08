@@ -31,6 +31,8 @@ h3,
 .header {
   width: 100%;
   background: var(--white);
+  display: flex;
+  flex-direction: column;
 }
 
 .header-photo {
@@ -72,9 +74,11 @@ h3,
 }
 
 .header-card__icon {
-  width: 60%;
-  height: auto;
   display: block;
+  width: auto;
+  height: auto;
+  max-width: 60%;
+  max-height: 60%;
 }
 
 .header-card--brown {
@@ -188,3 +192,32 @@ h3,
   flex-shrink: 0;
 }
 /* #endregion Footer */
+
+/* #region Desktop (Responsive @768px) */
+@media (min-width: 768px) {
+  .main-page {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+
+  .menu-btn {
+    display: none;
+  }
+
+  .header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    aspect-ratio: 2 / 1;
+  }
+  .header-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 100%;
+  }
+  .header-card {
+    aspect-ratio: auto;
+    min-height: 0;
+  }
+}
+/* #endregion Desktop */
