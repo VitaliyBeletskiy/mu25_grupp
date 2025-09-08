@@ -11,6 +11,7 @@
   --font-display: "Maven Pro", sans-serif;
 }
 
+/* #region General */
 body {
   font-family: var(--font-sans);
   font-size: 16px;
@@ -24,6 +25,7 @@ h3,
 .shade-title {
   font-family: var(--font-display);
 }
+/* #endregion */
 
 /* #region Header (mobile) */
 .header {
@@ -82,6 +84,34 @@ h3,
   background: var(--green);
 }
 /* #endregion Header */
+
+/* #region Menu Button */
+.menu-btn {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  width: 44px;
+  height: 44px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.menu-icon {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.menu-btn:active {
+  transform: scale(0.96);
+}
+
+.menu-btn:focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+}
+/* #endregion Menu Button */
 
 /* #region Footer (mobile) */
 .footer {
