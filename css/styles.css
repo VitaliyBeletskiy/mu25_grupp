@@ -203,20 +203,24 @@ h3,
   text-align: center;
   margin: 0 0 24px;
 }
-.planned_subtitle {
+.planned__subtitle {
   text-align: center;
   margin: 0 0 12px;
 }
 .planned__body {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "content"
+    "media";
 }
-.planned_content {
+.planned__content {
+  grid-area: content;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.planned_text {
+.planned__text {
   text-align: center;
   max-width: 60ch;
 }
@@ -238,10 +242,11 @@ h3,
   color: var(--white);
 }
 .btn--primary:hover {
-  background: var(--teal); /* чуть темнее */
+  background: var(--teal);
 }
 
 .planned__media {
+  grid-area: media;
   margin: 32px 0;
 }
 
@@ -308,5 +313,32 @@ h3,
     grid-template-areas: "contacts logo";
   }
   /* #endregion Footer */
+
+  /* #region Planned */
+  .planned__body {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "media content";
+    align-items: center;
+    gap: 40px;
+  }
+
+  .planned__content {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .planned__subtitle,
+  .planned__text {
+    text-align: left;
+  }
+
+  .planned__cta {
+    align-self: flex-end;
+  }
+  .planned__line {
+    display: none;
+  }
+  /* #endregion Planned */
 }
 /* #endregion Desktop */
