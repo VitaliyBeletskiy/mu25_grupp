@@ -400,6 +400,17 @@ h3,
 }
 /* #endregion Planned Grid (mobile) */
 
+/* #region Past Crops (mobile) */
+.past-crops {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "media"
+    "content";
+  margin-block: 40px; /* vertical/between sections */
+}
+/* #endregion Past Crops (mobile) */
+
 /* #region Desktop (Responsive @768px) */
 @media (min-width: 768px) {
   .main-page {
@@ -513,5 +524,19 @@ h3,
     transform: translateY(1px);
   }
   /* #endregion Planned Grid */
+
+  /* #region Past Crops */
+  .past-crops {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "content media";
+    align-items: center;
+    gap: 40px;
+  }
+  .past-crops__cta--left {
+    align-self: flex-start;
+    justify-content: flex-start;
+  }
+  /* #endregion Past Crops */
 }
 /* #endregion Desktop */
