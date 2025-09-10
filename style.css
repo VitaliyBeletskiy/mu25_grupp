@@ -93,9 +93,7 @@ a:hover {
 /* Formulär-kod */
 
 .form-container {
-  max-width: 600px;
-  margin: auto;
-  padding: 20px;
+  padding: 40px;
   border-radius: 10px;
 }
 
