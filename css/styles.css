@@ -3,7 +3,7 @@
   --brown: #9c6b4f;
   --teal: #3b8d7b;
   --dark: #1c1c1c;
-  --light-gray: #f5f5f5;
+  --light-pink: #fcf5fc;
   --white: #ffffff;
   --red: #c94c4c;
 
@@ -16,7 +16,7 @@ body {
   font-family: var(--font-sans);
   font-size: 16px;
   line-height: 1.5;
-  background: var(--light-gray);
+  background: var(--light-pink);
 }
 
 .main-page {
@@ -93,7 +93,7 @@ h3,
 }
 /* #endregion Header */
 
-/* #region Nav */
+/* #region Nav (mobile) */
 .nav {
   display: none;
 }
@@ -300,6 +300,14 @@ h3,
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
+.planned-grid__more {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 8px;
+}
+/* #endregion Planned Grid (mobile) */
+
+/* #region Planned Card (mobile) */
 .plant-card {
   background: var(--white);
   box-shadow: 8px 12px 24px -8px rgba(0, 0, 0, 0.22);
@@ -386,13 +394,9 @@ h3,
   overflow: hidden;
   white-space: nowrap;
 }
+/* #endregion Planned Card (mobile) */
 
-.planned-grid__more {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0 8px;
-}
-
+/* #region Button (mobile) */
 .btn {
   display: inline-block;
   padding: 8px 16px;
@@ -415,7 +419,7 @@ h3,
 .btn--shadow {
   box-shadow: 0 8px 20px -6px rgba(0, 0, 0, 0.25);
 }
-/* #endregion Planned Grid (mobile) */
+/* #endregion Button (mobile) */
 
 /* #region Past Crops (mobile) */
 .past-crops {
@@ -533,6 +537,9 @@ h3,
   .planned-grid {
     grid-template-columns: 1fr 1fr 1fr;
   }
+   /* #endregion Planned Grid */
+
+  /* #region Planned Card */
   .plant-card__action {
     /* reset mobile icon*/
     -webkit-mask: none !important;
@@ -569,7 +576,7 @@ h3,
   .plant-card__action:active {
     transform: translateY(1px);
   }
-  /* #endregion Planned Grid */
+  /* #endregion Planned Card */
 
   /* #region Past Crops */
   .past-crops {
