@@ -275,9 +275,16 @@ nav {
   padding: 0;
   width: 20px;
   height: 20px;
-  background-color: var(--red); /* цвет иконки */
+  background-color: #c94c4c; /* цвет иконки */
   -webkit-mask: url("../icons/bin.svg") no-repeat center / contain;
   mask: url("../icons/bin.svg") no-repeat center / contain;
+
+  background-image: url("../icons/bin.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+
+
 }
 .plant-card__action-label {
   position: absolute !important;
