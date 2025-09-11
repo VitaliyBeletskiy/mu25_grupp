@@ -3,183 +3,149 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Planned planthood</title>
+    <title>Mina sidor</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;600&family=Open+Sans:wght@400;600&display=swap" />
+    <link rel="stylesheet" href="css/reset.css" />
     <link rel="stylesheet" href="css/styles_page2.css" />
   </head>
   <body>
+    <!-- Wrapper för hela sidan -->
+    <div class="main-page">
+      <!-- Nav -->
+      <nav>
+        <ul>
+          <li><a href="#">PLANER</a></li>
+          <li><a href="#">HISTORIK</a></li>
+          <li><a href="#">TIPS</a></li>
+          <li><a href="#">LOGGA UT</a></li>
+        </ul>
+      </nav>
 
-     <div class="main-page"> <!-- Wrapper för hela sidan -->
-    <!-- Nav -->
-    <nav>
-      <ul>
-        <li><a href="#">Planer</a></li>
-        <li><a href="#">Historik</a></li>
-        <li><a href="#">Tips</a></li>
-        <li><a href="#">Logga ut</a></li>
-      </ul>
-    </nav>
+      <!-- Header med bakgrundsbild och ikon och text -->
+      <header class="header">
+        <img class="header__img" src="images/handsidan.avif" alt="Logo with hand and dirt" />
+        <img class="header__logo" src="icons/logo.svg" alt="Ikon" />
+        <span class="header__text">Mina sidor</span>
 
-    <!-- Header med bakgrundsbild och ikon och text -->
+        <!-- Hamburgarmeny för mobil -->
+        <button class="menu-btn" aria-label="Open menu">
+          <img src="icons/burger.svg" alt="" aria-hidden="true" />
+        </button>
+      </header>
 
-    <header class="header">
-      <img class="logo" src="images/handsidan.avif" alt="Logo with hand and dirt" />
-      <div class="icon-box">
-        <img class="icon" src="icons/logo.svg" alt="Ikon" />
-        <p>Mina sidor</p>
-      </div>
+      <main class="main">
+        <!-- Formulär för att lägga till ny plantering -->
+        <section class="form-container">
+          <h2>Lägg till ny plantering:</h2>
+          <form>
+            <section class="form-row">
+              <label>
+                Planta:
+                <input type="text" name="planta1" />
+              </label>
 
-      <!-- Hamburgarmeny för mobil -->
+              <label>
+                Datum:
+                <input type="date" name="datum1" />
+              </label>
+            </section>
 
-      <button class="menu-btn" aria-label="Open menu">
-        <img src="icons/burger.svg" alt="" aria-hidden="true" />
-      </button>
-    </header>
+            <section class="form-row">
+              <label>
+                Planta:
+                <input type="text" name="planta2" />
+              </label>
 
-    <!-- Formulär för att lägga till ny plantering -->
+              <label>
+                Datum:
+                <input type="date" name="datum2" />
+              </label>
+            </section>
 
-    <section class="form-container">
-      <h2>Lägg till ny plantering:</h2>
-      <form>
-        <section class="form-row">
-          <label>
-            Planta:
-            <input type="text" name="planta1" />
-          </label>
+            <!-- Knapp för  "lägga till"" plantering -->
 
-          <label>
-            Datum:
-            <input type="date" name="datum1" />
-          </label>
+            <button class="lagg-till" type="submit">Lägg till</button>
+          </form>
         </section>
 
-        <section class="form-row">
-          <label>
-            Planta:
-            <input type="text" name="planta2" />
-          </label>
-
-          <label>
-            Datum:
-            <input type="date" name="datum2" />
-          </label>
+        <section class="planned-plantings">
+          <h3 class="plant-card-grid__title">Dina planterade planteringar:</h3>
+          <div class="plant-card-grid">
+            <div class="plant-card">
+              <div class="plant-card__media">
+                <img class="plant-card__img" src="images/gurka.avif" alt="Bild på gurka" />
+                <img class="plant-card__icon" src="icons/plant.svg" alt="Ikon växt" />
+              </div>
+              <div class="plant-card__body">
+                <span class="plant-card__name">Gurka</span>
+                <span class="plant-card__date">15 april 2024</span>
+                <span class="plant-card__meta">Rico Coolio</span>
+                <button class="plant-card__action" type="button">
+                  <span class="plant-card__action-label">TA BORT</span>
+                </button>
+              </div>
+            </div>
+          </div>
         </section>
 
-        <!-- Knapp för  "lägga till"" plantering -->
-
-        <button class="lagg-till" type="submit">Lägg till</button>
-      </form>
-
-      <!-- Sektion för planerade planteringar -->
-      <section class="planned">
-        <h3 class="planned-grid__title">Våra planerade planteringar:</h3>
-
-        <div class="planned-grid">
-          <div class="plant-card">
-            <div class="plant-card__media">
-              <img class="plant-card__img" src="images/gurka.avif" alt="" />
-              <img class="plant-card__icon" src="icons/plant.svg" alt="" />
+        <section class="planted-plantings">
+          <h3 class="plant-card-grid__title">Dina planterade planteringar:</h3>
+          <div class="plant-card-grid">
+            <div class="plant-card">
+              <div class="plant-card__media">
+                <img class="plant-card__img" src="images/gurka.avif" alt="Bild på gurka" />
+                <img class="plant-card__icon" src="icons/plant.svg" alt="Ikon växt" />
+              </div>
+              <div class="plant-card__body">
+                <span class="plant-card__name">Gurka</span>
+                <span class="plant-card__date">15 april 2024</span>
+                <span class="plant-card__meta">Rico Coolio</span>
+                <button class="plant-card__action" type="button">
+                  <span class="plant-card__action-label">TA BORT</span>
+                </button>
+              </div>
             </div>
-            <div class="plant-card__body">
-              <span class="plant-card__name">Gurka</span>
-              <span class="plant-card__date">15 april 2024</span>
-              <span class="plant-card__meta">Rico Coolio</span>
-              <button class="plant-card__action">
-                <span class="action__label">TA BORT</span>
-              </button>
-            </div>
-          </div>
 
-          <div class="plant-card">
-            <div class="plant-card__media">
-              <img class="plant-card__img" src="images/tomater.avif" alt="" />
-              <img class="plant-card__icon" src="icons/plant.svg" alt="" />
-            </div>
-            <div class="plant-card__body">
-              <span class="plant-card__name">Tomat</span>
-              <span class="plant-card__date">15 april 2024</span>
-              <span class="plant-card__meta">Majvor och P-Å</span>
-              <button class="plant-card__action">
-                <span class="action__label">TA BORT</span>
-              </button>
+            <div class="plant-card">
+              <div class="plant-card__media">
+                <img class="plant-card__img" src="images/gurka.avif" alt="Bild på gurka" />
+                <img class="plant-card__icon" src="icons/plant.svg" alt="Ikon växt" />
+              </div>
+              <div class="plant-card__body">
+                <span class="plant-card__name">Gurka</span>
+                <span class="plant-card__date">15 april 2024</span>
+                <span class="plant-card__meta">Rico Coolio</span>
+                <button class="plant-card__action" type="button">
+                  <span class="plant-card__action-label">TA BORT</span>
+                </button>
+              </div>
             </div>
           </div>
-        </div>
-      </section>
-    </section>
+        </section>
+      </main>
 
-    <h2>Dina planterade planteringar:</h2>
-
-    <div class="planteringar">
-      <!-- Kort 1 -->
-      <div class="kort">
-        <div class="image-wrapper">
-          <img src="images/gurka.avif" alt="gurka" />
-          <!-- loggan som ligger över bilden -->
-          <img src="icons/plant.svg" alt="logo" class="logo" />
-        </div>
-        <div class="content">
-          <div class="titel-datum">
-            <h3>Gurka</h3>
-            <p class="datum">15 april 2024</p>
+      <!-- Sektion med bilder längst ner -->
+      <footer>
+        <div class="footer__gallery">
+          <div class="footer__gallery-item">
+            <img class="footer__gallery-img" src="images/plockar.avif" alt="plockar" />
           </div>
-          <div class="footer">
-            <div class="namn-knapp">
-              <p class="namn">Rico Coolio</p>
-              <!-- desktop knapp -->
-              <button>TA BORT</button>
-              <!-- mobil ikon -->
-              <img src="icons/bin.svg" alt="ta bort" class="bin-icon" />
-            </div>
+          <div class="footer__gallery-item">
+            <img class="footer__gallery-img" src="images/vattenkanna.avif" alt="Vatten" />
+          </div>
+          <div class="footer__gallery-item">
+            <img class="footer__gallery-img" src="images/massagrönsaker.avif" alt="grön" />
+          </div>
+          <div class="footer__gallery-item">
+            <img class="footer__gallery-img" src="images/tjejmedhatt.avif" alt="tjejmedhatt" />
           </div>
         </div>
-      </div>
 
-      <!-- Kort 2 -->
-      <div class="kort">
-        <div class="image-wrapper">
-          <img src="images/gurka.avif" alt="gurka" />
-          <img src="icons/plant.svg" alt="logo" class="logo" />
+        <!-- Till toppen av sidan -->
+        <div class="footer__backtop">
+          <a class="footer__backtop-link" href="#">Till toppen av sidan</a>
         </div>
-        <div class="content">
-          <div class="titel-datum">
-            <h3>Gurka</h3>
-            <p class="datum">15 april 2024</p>
-          </div>
-          <div class="footer">
-            <div class="namn-knapp">
-              <p class="namn">Rico Coolio</p>
-              <button>TA BORT</button>
-              <img src="icons/bin.svg" alt="ta bort" class="bin-icon" />
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- Sektion med bilder längst ner -->
-    <div class="bottom-section">
-      <div class="bottom-images">
-        <div class="bottom-image">
-          <img src="images/plockar.avif" alt="plockar" />
-        </div>
-        <div class="bottom-image">
-          <img src="images/vattenkanna.avif" alt="Vatten" />
-        </div>
-        <div class="bottom-image">
-          <img src="images/massagrönsaker.avif" alt="grön" />
-        </div>
-        <div class="bottom-image">
-          <img src="images/tjejmedhatt.avif" alt="tjejmedhatt" />
-        </div>
-      </div>
-    </div>
-
-    <!-- Till toppen av sidan -->
-    <div class="to-top">
-      <a href="#top">Till toppen av sidan</a>
-    </div>
-
+      </footer>
     </div>
   </body>
 </html>

@@ -204,14 +204,14 @@ h3,
 
 .footer__backtop {
   width: 100%;
-  background: #fff;
+  background: var(--white);
   text-align: center;
   padding: 10px 16px;
 }
 
 .footer__backtop-link {
   font-size: clamp(12px, 2.2vw, 14px);
-  color: var(--text, #1f1f1f);
+  color: var(--text);
   text-decoration: none;
 }
 
@@ -285,29 +285,30 @@ h3,
   margin: 32px auto 0;
   border-radius: 2px;
 }
+.planned__more {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 8px;
+}
 /* #endregion Planned (mobile) */
 
-/* #region Planned Grid (mobile) */
-.planned-grid__title {
+/* #region Plant Card Grid (mobile) */
+.plant-card-grid__title {
   margin: 24px 0 16px;
   text-align: center;
   font-weight: 600;
   line-height: 1.2;
   font-size: clamp(18px, 5vw, 24px);
 }
-.planned-grid {
+.plant-card-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 20px;
 }
-.planned-grid__more {
-  display: flex;
-  justify-content: center;
-  margin: 20px 0 8px;
-}
-/* #endregion Planned Grid (mobile) */
 
-/* #region Planned Card (mobile) */
+/* #endregion Plant Card Grid (mobile) */
+
+/* #region Plant Card (mobile) */
 .plant-card {
   background: var(--white);
   box-shadow: 8px 12px 24px -8px rgba(0, 0, 0, 0.22);
@@ -394,7 +395,7 @@ h3,
   overflow: hidden;
   white-space: nowrap;
 }
-/* #endregion Planned Card (mobile) */
+/* #endregion Plant Card (mobile) */
 
 /* #region Button (mobile) */
 .btn {
@@ -529,17 +530,17 @@ h3,
   }
   /* #endregion Planned */
 
-  /* #region Planned Grid */
-  .planned-grid__title {
+  /* #region Plant Card Grid */
+  .plant-card-grid__title {
     margin: 32px 0 24px;
     font-size: clamp(20px, 2vw, 28px);
   }
-  .planned-grid {
+  .plant-card-grid {
     grid-template-columns: 1fr 1fr 1fr;
   }
-   /* #endregion Planned Grid */
+   /* #endregion Plant Card Grid */
 
-  /* #region Planned Card */
+  /* #region Plant Card */
   .plant-card__action {
     /* reset mobile icon*/
     -webkit-mask: none !important;
@@ -576,7 +577,7 @@ h3,
   .plant-card__action:active {
     transform: translateY(1px);
   }
-  /* #endregion Planned Card */
+  /* #endregion Plant Card */
 
   /* #region Past Crops */
   .past-crops {
