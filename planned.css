@@ -3,7 +3,6 @@
 *::after {
   margin: 0;
   padding: 0;
-
 }
 :root {
   --green: #2a8b78;
@@ -17,6 +16,8 @@
   --font-sans: "Open Sans", Arial, sans-serif;
   --font-display: "Maven Pro", sans-serif;
 }
+
+  <!----- Body-stilar Grundinställningar för text och centrering------->
 body {
   font-family: var(--font-sans);
   font-size: 16px;
@@ -24,13 +25,12 @@ body {
   align-items: center;
   justify-content: center;
 }
- 
+   <!----Header Innehåller logotyp, menyknapp och bilder---->
 .header {
  width: 100%;
  background: var(--white);
  display: flex;
  flex-direction: column;
-
 }
 .header-image {
   width: 100%;
@@ -38,17 +38,13 @@ body {
   object-fit: cover;
   display: block;
   padding: 0px;
-
   background-color: #D9D9D2;
-
 }
-
 .header-photo {
   position: relative;
   width: 100%;
   aspect-ratio: 1 / 1;
   overflow: hidden;
-  
 }
 .header-logo {
   position: absolute;
@@ -58,8 +54,6 @@ body {
   height: auto;
   pointer-events: none;
 }
-
-
 .menu-btn {
   position: absolute;
   top: 12px;
@@ -70,17 +64,14 @@ body {
   border: 0;
   cursor: pointer;
 }
-
 .menu-icon {
   width: 100%;
   height: 100%;
   display: block;
 }
-
 .menu-btn:active {
   transform: scale(0.96);
 }
-
 .menu-btn:focus-visible {
   outline: 2px solid #fff;
   outline-offset: 2px;
@@ -111,20 +102,9 @@ body {
 .header-card--green {
   background: var(--green);
 }
-
-
-
+<!-- NAVIGATION som visar på mobil -->
 .nav {
   display: none;
-  gap: 1.5rem;
- 
-  justify-content: center;
-  align-items: center;
-}
-
-.nav a {
-  color: rgb(99, 67, 67);
-  text-decoration: none;
 }
 .content {
   display: flex;
@@ -133,15 +113,12 @@ body {
   text-align: center;
   padding: 1.5rem;
 }
-
-/* Title */
 .site-title {
   font-size: 2rem; 
   text-align: center;
   color: #0A846E;
   padding: 10px;
   margin: 0 0 24px;;
-
 }
 .subtitle {
   font-size: 1.5rem;
@@ -149,21 +126,17 @@ body {
   margin:0 0 12px;
   text-align: center;
 }
-
-/* Intro text */
 .intro-text {
   max-width: 400px;
   margin-bottom: 1.5rem;
   line-height: 1.5;
 }
-
 .btn {
   background: #007a5a;
   color: white;
   padding: 0.8rem 1.5rem;
   font-size:1rem;
   font-family: var(--font-sans);
-  
   border: none;
   border-radius: 10px;
   cursor: pointer;
@@ -209,7 +182,6 @@ body {
   grid-template-columns:1fr 1fr;
   gap: 20px;
 }
-
 .plant-card__img {
   width: 100%;
   height: 100%;
@@ -236,7 +208,6 @@ body {
   width: 50%;
   height: auto;
   pointer-events: none;
-  
 }
 .plant-info {
   display: grid;
@@ -248,13 +219,11 @@ body {
   padding: 12px 14px;
   align-items: center;
 }
-
 .plant-name {
   grid-area: name;
   font-weight: 300;
   font-size: clamp(12px, 3vw, 24px);
 }
-
 .plant-date {
   grid-area: date;
   justify-self: end;
@@ -264,14 +233,14 @@ body {
   line-height: 1.2;
   white-space: nowrap;;
 }
-
 .plant-description {
   grid-area: meta;
   font-size: clamp(10px, 2.8vw, 14px);
   color: #777;
   white-space: nowrap;
 }
-
+/* Åtgärdsknappens stil för att ta bort en växt 
+   Här använder vi `!important` för att säkra att knappen alltid har rätt utseende, oavsett andra regler. */
 .plant-card__action {
   grid-area: actions;
   justify-self: end;
@@ -306,7 +275,6 @@ body {
   justify-content: center;
   margin: 20px 0 8px;
 }
-
 .btn2 {
   display: inline-block;
   padding: 8px 16px;
@@ -328,6 +296,15 @@ body {
 }
 /* RESPONSIVE */
 @media (min-width: 1024px) {
+  body {
+    background-color: #fcf5fc; 
+    display: flex;
+    justify-content: center;
+  }
+  .container {
+    width: 1000px;
+    background-color: #ffffff; 
+  }
   .top-sidan {
     max-width: 1000px;
     margin: 0 auto;
@@ -351,6 +328,7 @@ body {
   .menu-btn {
     display: none;
   }
+  <!-- NAVIGATION som visar på desktop -->
   .nav {
     display: flex;
     justify-content: space-evenly;
@@ -389,23 +367,17 @@ body {
     margin: 0 auto;
     grid-template-areas: "media content ";
  }
-
   .content {
     grid-area: content;
     display: flex;
    flex-direction: column;
    text-align:left;
    align-items: flex-start;
-   
- 
   }
-
   .planned-circle {
     grid-column: 1;
-   
      margin: 0 auto;
   }
-  
   .btn {
    display: inline-block;
    padding: 0.8rem 1.5rem ;
@@ -419,7 +391,6 @@ body {
    margin-left: auto; 
    margin-top: 1rem;
   }
-   
   .planned-media {
     grid-area: media;
     display: flex;
@@ -438,22 +409,22 @@ body {
   max-width: 60%;
   max-height: 60%;
  }
-  .planned__line {
-  display:none;
+  <!-- LINJE som döljer på desktop -->
+ .planned__line {
+   display:none;
   }
+  <!-- PLANTS-sektion -->
    .plant-grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr; 
     max-width: 1000px;
     margin:0 auto;
-    
    }
+   /* reset mobile icon*/
   .plant-card__action {
-    /* reset mobile icon*/
-    -webkit-mask: none !important;
+    -webkit-mask: none !important;/* Vi tar bort masken för ikoner på mobil. Detta gör att ikoner inte längre döljs av någon mask och visas fullt ut. */
     mask: none !important;
-    background-image: none !important;
-
+    background-image: none !important; /* Bakgrundsbild tas bort för att förhindra att den syns på mobilstorlek. */
     background: var(--red);
     color: #fff;
     border: 1px solid var(--red);
