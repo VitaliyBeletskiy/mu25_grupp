@@ -177,7 +177,8 @@ button:hover {
   background-color: #042f23;
 }
 
-nav { /* gömmer hamburgarmenyn on desktop */
+nav {
+  /* gömmer hamburgarmenyn on desktop */
   display: none;
 }
 
@@ -290,7 +291,16 @@ nav { /* gömmer hamburgarmenyn on desktop */
   overflow: hidden;
   white-space: nowrap;
 }
-
+.plant-card__actions {
+  grid-area: actions;
+  justify-self: end;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.plant-card__action--edit {
+  display: none;
+}
 /* #endregion Plant Card (mobile) */
 
 /* #region Footer (mobile) */
@@ -339,7 +349,8 @@ nav { /* gömmer hamburgarmenyn on desktop */
 /* #region Media Queries för desktop */
 
 @media (min-width: 768px) {
-  .main-page { /* wrapper för hela sidan */
+  .main-page {
+    /* wrapper för hela sidan */
     max-width: 1000px;
     margin: 0 auto;
   }
@@ -420,6 +431,21 @@ nav { /* gömmer hamburgarmenyn on desktop */
   }
   .plant-card__action:active {
     transform: translateY(1px);
+  }
+  .plant-card__action--edit {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--green);
+    border: 1px solid var(--green);
+    border-radius: 10px;
+    color: #fff;
+    padding: 6px 12px;
+    font-size: clamp(12px, 1.8vw, 14px);
+    cursor: pointer;
+  }
+  .plant-card__meta {
+    align-self: end;
   }
   /* #endregion Plant Card */
 
