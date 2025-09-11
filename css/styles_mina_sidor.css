@@ -114,8 +114,9 @@ p {
 }
 
 .form h2 {
-  font-size: 1.4rem;
+  margin-bottom: 16px;
   font-weight: normal;
+  text-align: center;
 }
 
 form {
@@ -156,9 +157,6 @@ form {
   display: block; /* tar bort formuläret så att det blir 1 rad */
 }
 
-.form h2 {
-  text-align: center; /* centrerar rubriken */
-}
 /* #endregion Formulär-kod */
 
 /* Stil för "Lägg till" knappen */
@@ -179,7 +177,7 @@ button:hover {
   background-color: #042f23;
 }
 
-nav {
+nav { /* gömmer hamburgarmenyn on desktop */
   display: none;
 }
 
@@ -292,6 +290,7 @@ nav {
   overflow: hidden;
   white-space: nowrap;
 }
+
 /* #endregion Plant Card (mobile) */
 
 /* #region Footer (mobile) */
@@ -337,18 +336,23 @@ nav {
 
 /* #endregion Footer (mobile) */
 
+/* #region Media Queries för desktop */
+
 @media (min-width: 768px) {
-  .main-page {
+  .main-page { /* wrapper för hela sidan */
     max-width: 1000px;
     margin: 0 auto;
   }
 
   .header__menu-btn {
-    display: none;
+    display: none; /* döljer hamburgarmeny på desktop */
   }
 
   .main {
     margin-inline: 40px;
+  }
+  .form h2 {
+    text-align: left; /* vänsterjusterar rubriken */
   }
 
   /* #region Header (desktop) */
