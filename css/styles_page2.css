@@ -4,10 +4,13 @@ body {
   padding: 0;
   box-sizing: border-box;
   background-color: #fdf9fc; /* ljus bakgrundsfärg */
-  text-align: center;
   margin: 0;
-  padding: 20px;
 }
+
+.main-page {
+  background: #ffffff;
+}
+
 
 h1,
 h2,
@@ -344,6 +347,12 @@ button:hover {
   .planned-grid {
     grid-template-columns: 1fr 1fr 1fr; /* 3 kolumner på större skärmar */
   }
+
+  @media (min-width: 768px) {
+  .main-page {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
 }
 
 /* =====================================*/
@@ -501,3 +510,4 @@ button:hover {
   color: #000;
   font-weight: 500;
 }
+ }
