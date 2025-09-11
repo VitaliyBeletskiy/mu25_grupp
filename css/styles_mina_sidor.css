@@ -42,8 +42,8 @@ p {
   padding: 15px 20px;
 }
 
-.nav__linka {
-  color: rgb(33, 108, 12);
+.nav__link {
+  color: #2a8b78;
   text-decoration: none;
 }
 
@@ -361,7 +361,9 @@ nav {
     max-width: 1000px;
     margin: 0 auto;
   }
-
+nav {
+    display: block;
+  }
   .header__menu-btn {
     display: none; /* döljer hamburgarmeny på desktop */
   }
