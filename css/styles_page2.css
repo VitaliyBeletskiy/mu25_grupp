@@ -6,6 +6,7 @@
   --light-pink: #fcf5fc;
   --white: #ffffff;
   --red: #c94c4c;
+  --black: #000000;
 
   --font-sans: "Open Sans", Arial, sans-serif;
   --font-display: "Maven Pro", sans-serif;
@@ -24,11 +25,12 @@ body {
 
 h1,
 h2,
-h3 p {
+h3,
+p {
   font-family: var(--font-display);
 }
 
-ul {
+.nav__list {
   list-style: none; /* tar bort punkter */
   display: flex;
   justify-content: space-around; /* sprider ut länkarna */
@@ -36,16 +38,16 @@ ul {
   padding: 0 40px; /* lite luft på sidorna */
 }
 
-li {
+.nav__item {
   padding: 15px 20px;
 }
 
-a {
+.nav__linka {
   color: rgb(33, 108, 12);
   text-decoration: none;
 }
 
-a:hover {
+.nav__link:hover {
   color: #042f23;
 }
 
@@ -93,7 +95,7 @@ a:hover {
 }
 
 /* Stil för hamburgarmeny-knappen */
-.menu-btn {
+.header__menu-btn {
   position: absolute;
   top: 12px;
   right: 35px;
@@ -105,21 +107,13 @@ a:hover {
 }
 /* #endregion Header (mobile) */
 
-.icon-box p {
-  font-size: 1.2rem;
-  font-weight: bold;
-  color: white; /* gör texten synlig på bilden */
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* kontrast */
-}
-
-/* Formulär-kod */
-
-.form-container {
+/* #region Formulär-kod */
+.form {
   padding-block: 40px;
   border-radius: 10px;
 }
 
-.form-container h2 {
+.form h2 {
   font-size: 1.4rem;
   font-weight: normal;
 }
@@ -130,7 +124,7 @@ form {
   gap: 20px; /* mellanrum mellan elementen */
 }
 
-.form-row {
+.form__row {
   display: flex;
   justify-content: space-between;
   gap: 20px;
@@ -138,7 +132,7 @@ form {
   margin-bottom: 20px;
 }
 
-.form-row label {
+.form__row label {
   /* namnet framför formulärfältet */
   flex: 1; /* ta upp lika mycket plats som input */
   /* font-weight: bold; */
@@ -147,7 +141,7 @@ form {
   flex-direction: column; /* text över input */
 }
 
-.form-row input {
+.form__row input {
   /* själva formulärfältet */
   flex: 2; /* tar upp dubbelt så mycket plats som label */
   font-size: 1rem;
@@ -158,9 +152,17 @@ form {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Stil för "Lägg till" knappen */
+.form__row {
+  display: block; /* tar bort formuläret så att det blir 1 rad */
+}
 
-.lagg-till {
+.form h2 {
+  text-align: center; /* centrerar rubriken */
+}
+/* #endregion Formulär-kod */
+
+/* Stil för "Lägg till" knappen */
+.form__submit {
   align-self: center;
   padding: 10px 20px;
   background-color: #008060;
@@ -177,54 +179,13 @@ button:hover {
   background-color: #042f23;
 }
 
-.action__label {
-  position: absolute !important;
-  width: 1px;
-  height: 1px;
-  margin: -1px;
-  padding: 0;
-  border: 0;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  overflow: hidden;
-  white-space: nowrap;
-}
-
-.btn {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 10px 18px;
-  border-radius: 10px;
-  border: 0;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  cursor: pointer;
-}
-
-.btn--primary {
-  background: var(--green);
-  color: #fff;
-}
-
-.btn--shadow {
-  box-shadow: 0 8px 20px -6px rgba(0, 0, 0, 0.25);
-}
-
 nav {
   display: none;
-}
-.form-row {
-  display: block; /* tar bort formuläret så att det blir 1 rad */
-}
-
-.form-container h2 {
-  text-align: center; /* centrerar rubriken */
 }
 
 /* Döljer andra raden av formuläret på mobil */
 
-.form-row:nth-of-type(2) {
+.form__row:nth-of-type(2) {
   display: none;
 }
 
@@ -362,7 +323,7 @@ nav {
 
 .footer__backtop-link {
   font-size: clamp(12px, 2.2vw, 14px);
-  color: var(--text);
+  color: var(--black);
   text-decoration: none;
 }
 
@@ -382,7 +343,7 @@ nav {
     margin: 0 auto;
   }
 
-  .menu-btn {
+  .header__menu-btn {
     display: none;
   }
 
@@ -390,12 +351,22 @@ nav {
     margin-inline: 40px;
   }
 
+  /* #region Header (desktop) */
   .header {
     aspect-ratio: 1000 / 380;
   }
-  
-  .form-row:nth-of-type(1),
-  .form-row:nth-of-type(2) {
+  /* ikon */
+  .header__logo {
+    top: 40%; /* mitten vertikalt */
+  }
+  /* Mina sidor texten */
+  .header__text {
+    top: 80%; /* mitten vertikalt */
+  }
+  /* #endregion Header (desktop) */
+
+  .form__row:nth-of-type(1),
+  .form__row:nth-of-type(2) {
     display: flex;
   }
 

@@ -12,33 +12,33 @@
     <!-- Wrapper för hela sidan -->
     <div class="main-page">
       <!-- Nav -->
-      <nav>
-        <ul>
-          <li><a href="#">PLANER</a></li>
-          <li><a href="#">HISTORIK</a></li>
-          <li><a href="#">TIPS</a></li>
-          <li><a href="#">LOGGA UT</a></li>
+      <nav class="nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a class="nav__link" href="#">PLANER</a></li>
+          <li class="nav__item"><a class="nav__link" href="#">HISTORIK</a></li>
+          <li class="nav__item"><a class="nav__link" href="#">TIPS</a></li>
+          <li class="nav__item"><a class="nav__link" href="#">LOGGA UT</a></li>
         </ul>
       </nav>
 
       <!-- Header med bakgrundsbild och ikon och text -->
       <header class="header">
-        <img class="header__img" src="images/handsidan.avif" alt="Logo with hand and dirt" />
-        <img class="header__logo" src="icons/logo.svg" alt="Ikon" />
+        <img class="header__img" src="images/handsidan.avif" alt="Hand som håller jord med planta" />
+        <img class="header__logo" src="icons/logo.svg" alt="Planned Planthood logotyp" />
         <span class="header__text">Mina sidor</span>
 
         <!-- Hamburgarmeny för mobil -->
-        <button class="menu-btn" aria-label="Open menu">
-          <img src="icons/burger.svg" alt="" aria-hidden="true" />
+        <button class="header__menu-btn" aria-label="Open menu">
+          <img class="header__menu-icon" src="icons/burger.svg" alt="Menyikon" aria-hidden="true" />
         </button>
       </header>
 
       <main class="main">
         <!-- Formulär för att lägga till ny plantering -->
-        <section class="form-container">
-          <h2>Lägg till ny plantering:</h2>
-          <form>
-            <section class="form-row">
+        <section class="form">
+          <h2 class="form__title">Lägg till ny plantering:</h2>
+          <form class="form__body">
+            <section class="form__row">
               <label>
                 Planta:
                 <input type="text" name="planta1" />
@@ -50,7 +50,7 @@
               </label>
             </section>
 
-            <section class="form-row">
+            <section class="form__row">
               <label>
                 Planta:
                 <input type="text" name="planta2" />
@@ -64,7 +64,7 @@
 
             <!-- Knapp för  "lägga till"" plantering -->
 
-            <button class="lagg-till" type="submit">Lägg till</button>
+            <button class="form__submit" type="submit">Lägg till</button>
           </form>
         </section>
 
@@ -74,7 +74,7 @@
             <div class="plant-card">
               <div class="plant-card__media">
                 <img class="plant-card__img" src="images/gurka.avif" alt="Bild på gurka" />
-                <img class="plant-card__icon" src="icons/plant.svg" alt="Ikon växt" />
+                <img class="plant-card__icon" src="icons/plant.svg" alt="Växtikon" />
               </div>
               <div class="plant-card__body">
                 <span class="plant-card__name">Gurka</span>
@@ -94,7 +94,7 @@
             <div class="plant-card">
               <div class="plant-card__media">
                 <img class="plant-card__img" src="images/gurka.avif" alt="Bild på gurka" />
-                <img class="plant-card__icon" src="icons/plant.svg" alt="Ikon växt" />
+                <img class="plant-card__icon" src="icons/plant.svg" alt="Växtikon" />
               </div>
               <div class="plant-card__body">
                 <span class="plant-card__name">Gurka</span>
@@ -109,7 +109,7 @@
             <div class="plant-card">
               <div class="plant-card__media">
                 <img class="plant-card__img" src="images/gurka.avif" alt="Bild på gurka" />
-                <img class="plant-card__icon" src="icons/plant.svg" alt="Ikon växt" />
+                <img class="plant-card__icon" src="icons/plant.svg" alt="Växtikon" />
               </div>
               <div class="plant-card__body">
                 <span class="plant-card__name">Gurka</span>
@@ -128,16 +128,16 @@
       <footer>
         <div class="footer__gallery">
           <div class="footer__gallery-item">
-            <img class="footer__gallery-img" src="images/plockar.avif" alt="plockar" />
+            <img class="footer__gallery-img" src="images/plockar.avif" alt="Person som plockar grönsaker" />
           </div>
           <div class="footer__gallery-item">
-            <img class="footer__gallery-img" src="images/vattenkanna.avif" alt="Vatten" />
+            <img class="footer__gallery-img" src="images/vattenkanna.avif" alt="Vattnar plantor med vattenkanna" />
           </div>
           <div class="footer__gallery-item">
-            <img class="footer__gallery-img" src="images/massagrönsaker.avif" alt="grön" />
+            <img class="footer__gallery-img" src="images/massagrönsaker.avif" alt="Olika grönsaker på bord" />
           </div>
           <div class="footer__gallery-item">
-            <img class="footer__gallery-img" src="images/tjejmedhatt.avif" alt="tjejmedhatt" />
+            <img class="footer__gallery-img" src="images/tjejmedhatt.avif" alt="Tjej med hatt i trädgården" />
           </div>
         </div>
 

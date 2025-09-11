@@ -6,6 +6,7 @@
   --light-pink: #fcf5fc;
   --white: #ffffff;
   --red: #c94c4c;
+  --black: #000000;
 
   --font-sans: "Open Sans", Arial, sans-serif;
   --font-display: "Maven Pro", sans-serif;
@@ -211,7 +212,7 @@ h3,
 
 .footer__backtop-link {
   font-size: clamp(12px, 2.2vw, 14px);
-  color: var(--text);
+  color: var(--black);
   text-decoration: none;
 }
 
